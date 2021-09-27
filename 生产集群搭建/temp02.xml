@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
+
+<configuration>
+    <!-- nn web端访问地址 -->
+    <property>
+        <name>dfs.namenode.http-address</name>
+        <value>node01:9870</value>
+    </property>
+
+    <!-- 2nn web端访问地址 -->
+    <property>
+        <name>dfs.namenode.secondary.http-address</name>
+        <value>node03:9868</value>
+    </property>
+
+    <!-- 配置HDFS网页登录使用的静态用户为atguigu -->
+    <property>
+        <name>hadoop.http.staticuser.user</name>
+        <value>hadoop</value>
+    </property>
+
+    <!-- 配置该atguigu(superUser)允许通过代理访问的主机节点 -->
+    <property>
+        <name>hadoop.proxyuser.hadoop.hosts</name>
+        <value>*</value>
+    </property>
+
+    <!-- 配置该atguigu(superUser)允许通过代理用户所属组 -->
+    <property>
+        <name>hadoop.proxyuser.hadoop.groups</name>
+        <value>*</value>
+    </property>
+
+    <!-- 配置该atguigu(superUser)允许通过代理的用户-->
+    <property>
+        <name>hadoop.proxyuser.hadoop.users</name>
+        <value>*</value>
+    </property>
+</configuration>
